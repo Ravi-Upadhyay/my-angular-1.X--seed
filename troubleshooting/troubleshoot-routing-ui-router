@@ -5,4 +5,32 @@
 2. in index.html replace/check if angular-ui-router.js is incleded in place of angular-route.js
    NOTE: first only comment old one and include new one.
 
+3. include <ui-view></ui-view> in index.html
+
 3. check if you have included ui.router as dependency in main module. If you have removed/commented angular-route.js also remove/comment
+
+4. check you have commented all comments in view1.js view2.js view1_test.js view2_test.js because they have code related to angular-route(default route) and also remove them from index.html and app.js
+
+5. check you have commented code in modudle file app.js which sets default route.
+
+6. As we will follow component architecture, we will create a component inside components
+
+	-components
+		--hello-ui-router
+			---hello-component.js
+			---hello-module.js
+			---hello-template.js
+
+7. We will include newly created module to index.html and app.js. We will also include newly created component to index.html
+
+8. For Routing purpose we will create seperate configuration file
+
+	-core
+		--configurations
+			---route-configuration.js
+
+9. Do proper configuration for state
+
+
+
+
