@@ -29,7 +29,7 @@
 		--configurations
 			---route-configuration.js
 
-9. Do proper configuration for state
+9. Do proper configuration for state configuration in router-configuration.js
 
 
 
