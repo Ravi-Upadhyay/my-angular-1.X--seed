@@ -291,7 +291,7 @@ You will need to enable the integration between Travis and GitHub. See the
 
 ## Contact
 
-For more information on AngularJS please check out [angularjs.org][angularjs].
+For any suggestions and feedback, Please feel free to contact [Ravi Upadhyay](https://github.com/Ravi-Upadhyay/).
 
 
 [angularjs]: https://angularjs.org/

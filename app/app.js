@@ -1,17 +1,10 @@
-'use strict';
+(function(){
+  'use strict';
 
-// Declare app level module which depends on views, and components
-angular.module('myApp', [
-  // 'ngRoute',
-  'ui.router',
-  // 'myApp.view1',
-  // 'myApp.view2',
-  'myApp.helloUiRouter',
-  'myApp.version'
-]);
-// .
-// config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-//   $locationProvider.hashPrefix('!');
+  // Declare app level module which depends on views, and components
+  angular.module('myApp', [
+    'ui.router',
+    'myApp.helloUiRouter',
+  ]);
+})();
 
-//   $routeProvider.otherwise({redirectTo: '/view1'});
-// }]);

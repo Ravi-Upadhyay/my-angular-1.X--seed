@@ -1,24 +1,31 @@
+/**
+ * ROUTING-CONFIGURATION:
+ * 
+ * -- This file will configure routing
+ * -- We are using ui-router, state based routing
+ * -- TODO: Here write one example where we pass parameters with $state.go()
+ */
+(function(){
+    'use strict';
 
+    angular.module('myApp')
+        .config(function ($stateProvider, $locationProvider, $urlRouterProvider, $httpProvider) {
 
-'use strict';
+        //Logic to remove hash logic, from the url
+        // $locationProvider.html5Mode({
+        //     enabled: true,
+        //     requireBase: false
+        // });
 
-angular.module('myApp')
-    .config(function ($stateProvider, $locationProvider, $urlRouterProvider, $httpProvider) {
+        $urlRouterProvider.otherwise('/hello');
 
-    //Logic to remove hash logic, from the url
-    // $locationProvider.html5Mode({
-    //     enabled: true,
-    //     requireBase: false
-    // });
+        var hello = {
+            name: 'hello',
+            url: '/hello',
+            template: '<hello-ui-component></hello-ui-component>'
+        };
 
-    $urlRouterProvider.otherwise('/hello');
+        $stateProvider.state(hello);
 
-    var hello = {
-        name: 'hello',
-        url: '/hello',
-        template: '<hello-ui-component></hello-ui-component>'
-    };
-
-    $stateProvider.state(hello);
-
-    });
+        });
+})();

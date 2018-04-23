@@ -1,11 +1,21 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+TROUBLESHOOTING-ROUTING-ANGULARJS APP:
+
+1. HOW TO INTEGRATE AND CROSS CHECK INTEGRATION OF UI-router
+2. HOW TO INTEGRATE COMPONENTS INSTEAD OF MAINLY CONTROLLERS 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 1. We will install ui-router as a bower component
 	
 	bower install angular-ui-router --save
 
 2. in index.html replace/check if angular-ui-router.js is incleded in place of angular-route.js
+   
    NOTE: first only comment old one and include new one.
 
-3. include <ui-view></ui-view> in index.html
+3. include/replace <ui-view></ui-view> in index.html
 
 3. check if you have included ui.router as dependency in main module. If you have removed/commented angular-route.js also remove/comment
 
