@@ -1,35 +1,49 @@
-# `angular-seed` — the seed for AngularJS apps
+# `angular-seed-advanced` — the seed for AngularJS apps version(1.X):
+### Component Architecture + UI-router support
+This project is an application skeleton for a typical [AngularJS][angularjs] web app.This is not 
+default [angular-seed](https://github.com/angular/angular-seed) application. [angular-seed](https://github.com/angular/angular-seed)
+has been outstanding way when simply you need a skelton.
 
-This project is an application skeleton for a typical [AngularJS][angularjs] web app. You can use it
-to quickly bootstrap your angular webapp projects and dev environment for these projects.
+But, According to my experiences I have tried to implement more secure, robust and easy to understand architecture.
+You can use it to quickly bootstrap your angular webapp projects and dev environment for these projects.
 
-The seed contains a sample AngularJS application and is preconfigured to install the Angular
-framework and a bunch of development and testing tools for instant web development gratification.
+The seed contains a sample AngularJS application which comes with ships with [angular-seed](https://github.com/angular/angular-seed) application
+and is preconfigured to install the Angular framework and a bunch of development and testing tools for instant web development gratification. 
+We have made few for interesting changes to keep our architecture up-to-date.
 
-The seed app doesn't do much, just shows how to wire two controllers and views together.
+## Developments over previous versions
+
+### Current Version `1.0`
+
+- App architecture to support to full-fledged angular applications
+- Proper directory structure to support components, factories, services, directives
+- Component architecture implemented
+- UI-router implemented
+- Routing has been moved to seperate file under `core/configurations/route-configuration.js`
+- More modular approach. To support large scale app development and robust applications.
 
 
 ## Getting Started
 
-To get you started you can simply clone the `angular-seed` repository and install the dependencies:
+To get you started you can simply clone the `angular-seed-advanced` repository and install the dependencies:
 
 ### Prerequisites
 
-You need git to clone the `angular-seed` repository. You can get git from [here][git].
+You need git to clone the `angular-seed-advanced` repository. You can get git from [here][git].
 
-We also use a number of Node.js tools to initialize and test `angular-seed`. You must have Node.js
+We also use a number of Node.js tools to initialize and test `angular-seed-advanced`. You must have Node.js
 and its package manager (npm) installed. You can get them from [here][node].
 
-### Clone `angular-seed`
+### Clone `angular-seed-advanced`
 
-Clone the `angular-seed` repository using git:
+Clone the `angular-seed-advanced` repository using git:
 
 ```
-git clone https://github.com/angular/angular-seed.git
-cd angular-seed
+git clone https://github.com/Ravi-Upadhyay/angular-seed-advanced.git
+cd angular-seed-advanced
 ```
 
-If you just want to start a new project without the `angular-seed` commit history then you can do:
+If you just want to start a new project without the `angular-seed-advanced` commit history then you can do:
 
 ```
 git clone --depth=1 https://github.com/angular/angular-seed.git <your-project-name>
@@ -81,7 +95,11 @@ Now browse to the app at [`localhost:8000/index.html`][local-app-url].
 ```
 app/                    --> all of the source files for the application
   app.css               --> default stylesheet
-  components/           --> all app specific modules
+  components/           --> all app specific modules (We are following component architecture here)
+    hello-ui-router       --> our component (sample component)
+      hello-component.js    --> javascript component code (controller, template-binding, routing moved seprately)
+      hello-module.js       --> javascript module code, module for this component.
+      hello-template.html   --> html template that will be consumed by component.
     version/              --> version related components
       version.js                 --> version module declaration and basic "version" value service
       version_test.js            --> "version" value service tests
@@ -89,14 +107,12 @@ app/                    --> all of the source files for the application
       version-directive_test.js  --> version directive tests
       interpolate-filter.js      --> custom interpolation filter
       interpolate-filter_test.js --> interpolate filter tests
-  view1/                --> the view1 view template and logic
-    view1.html            --> the partial template
-    view1.js              --> the controller logic
-    view1_test.js         --> tests of the controller
-  view2/                --> the view2 view template and logic
-    view2.html            --> the partial template
-    view2.js              --> the controller logic
-    view2_test.js         --> tests of the controller
+  core/                 --> this folder will contain core modules that helps app to run
+    configurations        --> all configuration files for the app
+      route-configuration.js     --> routing configurations should be done here
+  directives/           --> if we have directives we will write down here
+  factories/            --> if we have factory we will write down here
+  services/             --> if we have services we will write down here
   app.js                --> main application module
   index.html            --> app layout file (the main html template file of the app)
   index-async.html      --> just like index.html, but loads js files asynchronously
