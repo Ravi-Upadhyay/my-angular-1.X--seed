@@ -3,9 +3,9 @@
   angular.module('moduleName')
   .factory('factoryName',factoryName);
 
-  factoryName.$inject = ['$http','ApiService','$httpParamSerializerJQLike'];
+  factoryName.$inject = ['$http','$httpParamSerializerJQLike'];
 
-  function factoryName($http,ApiService,$httpParamSerializerJQLike){
+  function factoryName($http,$httpParamSerializerJQLike){
     return {
       functionName:functionNameHere
     };

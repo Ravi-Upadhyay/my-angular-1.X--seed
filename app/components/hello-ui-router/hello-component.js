@@ -7,9 +7,9 @@
     controller: ('helloUiController', helloUiController)
   });
   
-  helloUiController.$inject = [];
+  helloUiController.$inject = ['dataFactory'];
   
-  function helloUiController() {
+  function helloUiController(dataFactory) {
   
   }
 })();
