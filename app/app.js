@@ -1,9 +1,14 @@
+/**
+ * MAIN/CORE MODULE OF APP:  //TODO: Write proper description here
+ */
+
 (function(){
   'use strict';
 
-  // Declare app level module which depends on views, and components
   angular.module('myApp', [
     'ui.router',
+    'myApp.services',
+    'myApp.factories',
     'myApp.helloUiRouter',
   ]);
 })();
